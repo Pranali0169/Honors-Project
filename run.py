@@ -17,7 +17,7 @@
 import subprocess
 import time
 import threading
-# import webview
+
 import os
 import sys
 import webbrowser
@@ -50,7 +50,3 @@ webbrowser.open("http://127.0.0.1:8000")
 # Wait for FastAPI to exit
 backend.wait()
 
-# Open a native window using PyWebView to show the frontend
-# webview.create_window("Flower Admin", "http://127.0.0.1:8000", width=1200, height=800)
-# webview.start()
-# backend.wait()
