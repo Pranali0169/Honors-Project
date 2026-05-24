@@ -3,13 +3,13 @@
 # import time
 
 # # Start FastAPI server
-# backend = subprocess.Popen(["uvicorn", "main:app", "--host", "127.0.0.1", "--port", "8000"],cwd="backend")
+# backend = subprocess.Popen(["uvicorn", "main:app", "--host", "0.0.0 0", "--port", "8000"],cwd="backend")
 
 # # Wait for the server to start
 # time.sleep(2)
 
 # # Open the default web browser
-# webbrowser.open("http://127.0.0.1:8000")
+# webbrowser.open("http://3.27.71.102:8000")
 
 # # Keep app running until closed manually
 # backend.wait()
@@ -33,10 +33,9 @@ def resource_path(relative_path):
 backend_dir = resource_path("backend")
 
 # Command to run Uvicorn from backend folder
-command = ["uvicorn", "main:app", "--host", "127.0.0.1", "--port", "8000"]
+command = ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 
 # Set the PYTHONPATH so FastAPI can resolve imports correctly
-env = os.environ.copy()
 env["PYTHONPATH"] = backend_dir
 
 # Start the server
@@ -44,8 +43,7 @@ backend = subprocess.Popen(command, cwd=backend_dir, env=env)
 
 # Wait and open browser
 time.sleep(2)
-webbrowser.open("http://127.0.0.1:8000")
+# webbrowser.open("http://127.0.0.1:8000")
+webbrowser.open("http://3.27.71.102:8000")
 
 # Wait for FastAPI to exit
-backend.wait()
-
