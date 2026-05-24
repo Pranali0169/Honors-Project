@@ -1,0 +1,65 @@
+allow users to enter a product code or name and retrieves its price ,stock stsus and availability at various stores in web simple code
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Lookup</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    input, button { padding: 8px; margin: 5px; }
+    #result { margin-top: 20px; }
+    .store { margin: 10px 0; }
+  </style>
+</head>
+<body>
+  <h2>Product Lookup</h2>
+  <input type="text" id="productInput" placeholder="Enter Product Name or Code">
+  <button onclick="searchProduct()">Search</button>
+
+  <div id="result"></div>
+
+  <script>
+    const productData = {
+      "P001": {
+        name: "Wireless Mouse",
+        price: "$15.99",
+        stock: "In Stock",
+        stores: [
+          { name: "Store A", availability: "Available" },
+          { name: "Store B", availability: "Out of Stock" },
+        ]
+      },
+      "P002": {
+        name: "Bluetooth Headphones",
+        price: "$39.99",
+        stock: "Limited Stock",
+        stores: [
+          { name: "Store A", availability: "Available" },
+          { name: "Store C", availability: "Available" },
+        ]
+      }
+    };
+
+    function searchProduct() {
+      const input = document.getElementById("productInput").value.trim().toUpperCase();
+      const resultDiv = document.getElementById("result");
+      resultDiv.innerHTML = "";
+
+      const product = productData[input];
+
+      if (product) {
+        resultDiv.innerHTML = `
+          <h3>${product.name}</h3>
+          <p><strong>Price:</strong> ${product.price}</p>
+          <p><strong>Stock Status:</strong> ${product.stock}</p>
+          <h4>Availability in Stores:</h4>
+          ${product.stores.map(store => `<div class="store">${store.name}: ${store.availability}</div>`).join("")}
+        `;
+      } else {
+        resultDiv.innerHTML = `<p style="color: red;">Product not found.</p>`;
+      }
+    }
+  </script>
+</body>
+</html>

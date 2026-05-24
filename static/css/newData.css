@@ -1,0 +1,136 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.navbar {
+    background: linear-gradient(to right, #ff4e50, #f9d423);
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 5px;
+    /* transition: background 0.3s; */
+}
+
+.navbar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.searchBar {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    width: 200px;
+}
+
+
+/* Compact form styling */
+#billFormInnerContainer {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#billForm label {
+    font-size: 0.9em;
+    margin: 2px 0;
+    display: block;
+}
+
+#billForm input {
+    width: 100%;
+    padding: 4px;
+    margin-bottom: 4px;
+    font-size: 0.9em;
+}
+
+#billForm button {
+    margin-top: 6px;
+}
+
+/* Bills section just under the form */
+#bills {
+    margin-top: 10px;
+}
+
+/* Date range picker in one row */
+#download {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#download h2 {
+    font-size: 1em;
+    margin: 0;
+}
+
+.date-picker {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.date-picker input {
+    padding: 4px;
+    font-size: 0.9em;
+}
+
+/* Button styling only */
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.close-btn {
+    background-color: #e74c3c;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 4px 8px;
+    font-size: 1em;
+    line-height: 1;
+}
+
+.close-btn:hover {
+    background-color: #c0392b;
+}

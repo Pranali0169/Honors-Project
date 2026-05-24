@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #fff8f0;
+}
+
+h2 {
+  color: #cc3366;
+}
+
+input, button {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #cc3366;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background-color: #b02e5a;
+}
+
+#result {
+  margin-top: 20px;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ddd;
+}
+
+.store {
+  margin: 8px 0;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}

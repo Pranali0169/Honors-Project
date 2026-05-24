@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Date Picker with Icon</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> -->
+    <!-- <link rel="stylesheet" href="../static/css/index.css" /> -->
+    <link rel="stylesheet" href="../static/css/newData.css" />
+</head>
+
+<body>
+
+    <!-- <div id="pdfContent" style="display: none; margin-bottom: 10px; margin-right: 20px;"></div> -->
+
+    <nav class="navbar">
+        <h1>A1 Roses Hi-Tech Agro Farm</h1>
+        <ul>
+            <li><input placeholder="find flower here..." class="searchBar"></li>
+            <li><a href="/">Dashboard</a></li>
+            <li><a href="#" id="addFlowerBtn">Add Flowers</a></li>
+            <li><a href="add-customer">Add Customer</a></li>
+            <!-- <li><a href="#" id="whatsappModule">WhatsApp Module</a></li> -->
+        </ul>
+    </nav>
+    
+    <div id="billFormInnerContainer" >
+        <h3>Update the Due Bill</h3>
+        <button class="close-btn" id="closeBillForm" onclick="window.location.href='/'">&times;</button>
+        <form id="billForm">
+            <label>Customer:</label><br>
+            <input type="text" id="customer" readonly><br><br>
+
+            <label>Mobile Number:</label><br>
+            <input type="text" id="mobile" readonly><br><br>
+
+            <label>Total Bill:</label><br>
+            <input type="number" id="total_bill" readonly><br><br>
+
+            <label>Debit:</label><br>
+            <input type="number" id="debited_amount" value=0 required><br><br>
+
+            <button type="submit" id="debit_submit">Submit</button>
+        </form>
+        <div id="bills" style="margin-top: 10px;"></div>
+        
+        <div id="download" style="margin-top: 50px;">
+            <h2>Select Date Range</h2>
+
+            <div class="date-picker">
+                <i class="fa fa-calendar"></i>
+                <input type="date" id="startDate" />
+            </div>
+
+            <div class="date-picker">
+                <i class="fa fa-calendar"></i>
+                <input type="date" id="endDate" />
+            </div>
+
+            <button onclick="download()">Download</button>
+
+            <p id="result"></p>
+        </div>
+        <div id="pdfContent" style="display: none; margin-bottom: 10px; margin-right: 20px;"></div>
+
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="../static/js/newData.js" defer></script>
+
+</body>
+
+</html>

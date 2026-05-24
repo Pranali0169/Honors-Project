@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../static/css/index.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <h1>A1 Roses Hi-Tech Agro Farm</h1>
+        <ul>
+            <li><input placeholder="find flower here..." class="searchBar"></li>
+            <li><a href="/">Dashboard</a></li>
+            <li><a href="#" id="addFlowerBtn">Add Flowers</a></li>
+            <li><a href="add-customer">Add Customer</a></li>
+            <!-- <li><a href="#" id="whatsappModule">WhatsApp Module</a></li> -->
+        </ul>
+    </nav>
+
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-search">
+                <h2>Search Customers</h2>
+                <input type="text" id="customerSearch" placeholder="Search by name">
+            </div>
+            <h2>Customer Profiles</h2>
+            <div id="customerList">
+                </div>
+        </aside>
+
+        <div class="vertical-divider"></div>
+
+        <section class="main-content">
+            <h2>Available Flowers List</h2>
+
+            <div id="addFlowerForm" class="hidden">
+                <div class="form-header">
+                    <h3>Add Flower</h3>
+                    <button id="closeFormBtn">Close</button>
+                </div>
+                <form id="flowerForm">
+                    <label for="flowerName">Flower Name:</label>
+                    <input type="text" id="flowerName" name="flowerName" required />
+
+                    <label for="flowerPrice">Price:</label>
+                    <input type="number" id="flowerPrice" name="flowerPrice" required />
+
+                    <!-- <label for="flowerCount">Count:</label> -->
+                    <input type="number" id="flowerCount" name="flowerCount" value=100 required/>
+
+                    <label for="flowerImage">Flower Image:</label>
+                    <input type="file" id="flowerImage" name="flowerImage" accept="image/*" required />
+
+                    <button type="submit">Add Flower</button>
+                </form>
+            </div>
+
+            <div id="flowerDisplay" class="flower-container"></div>
+        </section>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="../static/js/index.js" defer></script>
+</html>

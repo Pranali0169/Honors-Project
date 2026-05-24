@@ -1,0 +1,140 @@
+/* form {
+    width: 300px;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+button {
+    background: green;
+    color: white;
+    padding: 10px;
+    border: none;
+} */
+
+
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #444;
+}
+
+input[type="text"], input[type="email"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+.navbar {
+    background: linear-gradient(to right, #ff4e50, #f9d423);
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.searchBar {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    width: 200px;
+}
+
+.header-line {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 5px 0;
+  }
+  .header-line.small {
+    font-size: 14px;
+    font-weight: normal;
+  }
+  .header-bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-top: 5px;
+  }

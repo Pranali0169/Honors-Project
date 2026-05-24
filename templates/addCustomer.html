@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Add Customer</title>
+            <link rel="stylesheet" href="../static/css/addCustomer.css"> 
+            <script src="../static/js/addCustomer.js"></script>
+        </head>
+        <body>
+            <nav class="navbar">
+                <h1>A1 Roses Hi-Tech Agro Farm</h1>
+                <ul>
+                    <li><input placeholder="find flower here..." class="searchBar"></li>
+                    <li><a href="/">Dashboard</a></li>
+                    <li><a href="#" id="addFlowerBtn">Add Flowers</a></li>
+                    <li><a href="add-customer">Add Customer</a></li>
+                    <!-- <li><a href="#" id="whatsappModule">WhatsApp Module</a></li> -->
+                </ul>
+            </nav>
+            <!-- Adding customer's information -->
+            <h1>Add New Customer</h1> 
+            <form id="addCustomerForm">
+                <label for="customerName">Customer Name:</label>
+                <input type="text" id="customerName" name="customerName" required>
+        
+                <label for="customerPhone">Phone Number:</label>
+                <input type="text" id="customerPhone" name="customerPhone" required>
+        
+                <label for="customerEmail">Email:</label>
+                <input type='text' id="customerEmail" name="customerEmail">
+        
+                <button type="submit">Add Customer</button>
+            </form>
+        </body>
+        </html> 
